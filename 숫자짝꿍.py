@@ -2,13 +2,9 @@ def solution(x, y):
 
     answer = ''
     answer_list = []
-    
-    for i in x:
-        for j in y:
-            if i == j:
-                answer_list.append(i)
-                y.replace(j,'',1)
-                break
+    for i in (set(x) & set(y)):    #set()끼리 비교는 &(비교연산자) 사용
+        for j in range(min(x.count(i),y.count(i))):  #짝꿍의 수가 일치하도록 min()함수 사용
+            answer_list.append(i)
     answer_list.sort(reverse=True)
     if len(answer_list) == 0:
         return '-1'
@@ -18,6 +14,4 @@ def solution(x, y):
     
     answer = "".join(answer_list)    
     return answer
-
-print(solution("5525","1255"))
 
