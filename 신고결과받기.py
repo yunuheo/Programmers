@@ -4,7 +4,12 @@ def solution(id_list, report, k):
     
     report = list(set(report))
     reportHash = collections.defaultdict(set)
-    stoped = collections.defaultdict(int)
+    stopped = collections.defaultdict(int) #기본적으로 0으로 초기화됨
+
+    for x in report:
+        a, b = x.split(' ')
+        reportHash[a].add(b)
+        stopped[b] += 1
     
     
     
