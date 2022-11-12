@@ -12,5 +12,11 @@ def solution(id_list, report, k):
         stopped[b] += 1
     
     
-    
+    for name in id_list:
+        mail = 0  #신고자가 결과메일을 받는 횟수
+        for user in reportHash[name]:
+           if stopped[user] >= k:
+            mail += 1
+        answer.append(mail)
+        
     return answer
