@@ -21,7 +21,7 @@ def solution (fees, records):
 
     for i in range(10000):
         if sumT[i] > 0:
-            answer.append(fees[1] + max(math.ceil(sumT[i]-fees[0])/fees[2]),0*fees[3])
+            answer.append(fees[1] + max(math.ceil((sumT[i]-fees[0])/fees[2]),0)*fees[3])
 
     return answer
 
