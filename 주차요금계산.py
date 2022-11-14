@@ -19,4 +19,9 @@ def solution (fees, records):
         if isIn[i] == 1:
             sumT[i] += (23*60+59) - inTime[i]
 
+    for i in range(10000):
+        if sumT[i] > 0:
+            answer.append(fees[1] + max(math.ceil(sumT[i]-fees[0])/fees[2]),0*fees[3])
+
     return answer
+
