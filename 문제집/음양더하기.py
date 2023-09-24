@@ -11,7 +11,5 @@ def solution(absolutes, signs):
     
     for j in range(len(absolutes)):
         answer = answer + (absolutes[j] * signs[j])
-    print(answer)
-    return answer
 
-solution([4,7,12],[True,False,True])
+    return answer
